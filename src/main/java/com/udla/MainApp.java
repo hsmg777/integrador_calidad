@@ -1,3 +1,5 @@
+package com.udla;
+
 import java.util.Scanner;
 
 public class MainApp {

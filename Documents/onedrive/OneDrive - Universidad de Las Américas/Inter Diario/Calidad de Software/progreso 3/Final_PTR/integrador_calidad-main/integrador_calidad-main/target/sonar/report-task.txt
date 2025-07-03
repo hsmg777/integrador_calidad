@@ -1,0 +1,6 @@
+projectKey=Proyecto_Final
+serverUrl=http://localhost:9000
+serverVersion=25.5.0.107428
+dashboardUrl=http://localhost:9000/dashboard?id=Proyecto_Final
+ceTaskId=dc3de002-2f4a-48f7-9839-0997796dd076
+ceTaskUrl=http://localhost:9000/api/ce/task?id=dc3de002-2f4a-48f7-9839-0997796dd076

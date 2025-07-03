@@ -4,8 +4,8 @@ public class Student {
     private double grade;
 
     public Student(String name, double grade) {
-        if (name == null || name.isEmpty()) throw new IllegalArgumentException("Name cannot be empty.");
-        if (grade < 0 || grade > 100) throw new IllegalArgumentException("Grade must be between 0 and 100.");
+        if (name == null || name.isEmpty()) throw new IllegalArgumentException("El nombre no puede estar vacío.");
+        if (grade < 0 || grade > 10) throw new IllegalArgumentException("La calificación debe estar entre 0 y 10.");
         this.name = name;
         this.grade = grade;
     }

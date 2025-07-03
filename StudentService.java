@@ -7,11 +7,11 @@ public class StudentService {
     public void addStudent(String name, double grade) {
         Student student = new Student(name, grade);
         students.add(student);
-        System.out.println("Student added successfully.");
+        System.out.println("Estudiante agregado con exito: ");
     }
 
     public void listStudents() {
-        students.forEach(s -> System.out.println("Student: " + s.getName() + ", Grade: " + s.getGrade()));
+        students.forEach(s -> System.out.println("Estudiante: " + s.getName() + ", Calificación: " + s.getGrade()));
     }
 
     public List<Student> getAllStudents() {

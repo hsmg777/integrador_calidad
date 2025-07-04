@@ -21,7 +21,7 @@
             <version>5.10.0</version>
             <scope>test</scope>
         </dependency>
-    </dependencies>
+    </dependencies> 
 
     <build>
         <plugins>
@@ -71,6 +71,31 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+
+            <!-- Spotbugs -->
+            <plugin>
+                <groupId>com.github.spotbugs</groupId>
+                <artifactId>spotbugs-maven-plugin</artifactId>
+                <version>4.9.3.1</version>
+                <executions>
+                    <execution>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>spotbugs</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <jvmArgs>-Xmx2048m -Xms512m</jvmArgs>
+                    <failOnError>false</failOnError>
+                    <effort>Max</effort> <!-- Min, Default, Max -->
+                    <threshold>Low</threshold> <!-- High, Medium, Low -->
+                    <xmlOutput>true</xmlOutput>
+                    <htmlOutput>true</htmlOutput>
+                    <outputDirectory>${project.build.directory}/spotbugs</outputDirectory>
+                    <outputFile>spotbugs-report</outputFile>
+                </configuration>
             </plugin>
         </plugins>
     </build>
